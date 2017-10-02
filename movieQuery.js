@@ -9,19 +9,29 @@ var movieList = [
 
 function getMovieTitle( index ){
   //add code
+
+    return(movieList[index].title);
+
 }
 
 console.log(getMovieTitle(3));
 
 function addMovie( movie ){
   //add code
+  movieList.push(movie);
+  return movieList;
 }
 
-var newMovie = {};
+var newMovie ={title: "kajer bedi Rohima”, year: “1990", length: 200, rating: "10", genre: "sci-fi-comedy-sadness"};
 console.log(addMovie(newMovie));
 
+
 function movieByRating(){
-  //add code
+  var byRating = movieList.slice(0);
+
+  byRating.sort();
+  console.log(byRating.rating);
+
 }
 
 console.log(movieByRating());
