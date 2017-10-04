@@ -37,12 +37,24 @@ console.log(movieList);
 
 console.log(movieByRating());
 
-function findByTitle( title ){
+function findByTitle( x ){
   //add code
 
-  var s=title;
+for (var i = 0; i < movieList.length; i++) {
 
-  return movieList.search(s);
+  if(movieList[i].title==x)
+  {
+      return movieList[i];
+
+      break;
+  }
+  else {
+    console.log("Not found");
+  }
+
+
 }
 
-console.log(findByTitle("matrix"));
+}
+
+console.log(findByTitle("The Matrix Revolutions"));
